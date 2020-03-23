@@ -75,17 +75,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingInterfaces", "04_OOSam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualMethods", "04_OOSamples\VirtualMethods\VirtualMethods.csproj", "{50A81FE7-66D5-4467-B00F-43EDB2F4C65D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceBaseSample", "04_OOSamples\Asset\InheritanceBaseSample.csproj", "{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferencesPolymorphic", "04_OOSamples\ReferencesPolymorphic\ReferencesPolymorphic.csproj", "{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferencesPolymorphic", "04_OOSamples\ReferencesPolymorphic\ReferencesPolymorphic.csproj", "{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingReferenceConversions", "04_OOSamples\CastingReferenceConversions\CastingReferenceConversions.csproj", "{1021B197-BECF-431E-AD77-AD82A861AB43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastingReferenceConversions", "04_OOSamples\CastingReferenceConversions\CastingReferenceConversions.csproj", "{1021B197-BECF-431E-AD77-AD82A861AB43}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualFunctionMembers", "04_OOSamples\VirtualFunctionMembers\VirtualFunctionMembers.csproj", "{B33B93F8-B969-4686-BD5A-DED25182CB67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClassesAbstractMembers", "04_OOSamples\AbstractClassesAbstractMembers\AbstractClassesAbstractMembers.csproj", "{933C7FEA-26F3-40A6-9AC7-14245E0C3112}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClassesAbstractMembers", "04_OOSamples\AbstractClassesAbstractMembers\AbstractClassesAbstractMembers.csproj", "{933C7FEA-26F3-40A6-9AC7-14245E0C3112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewVsVirtual", "04_OOSamples\NewVsVirtual\NewVsVirtual.csproj", "{268BB388-89AA-46BF-8894-F0B6EDCDE989}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewVsVirtual", "04_OOSamples\NewVsVirtual\NewVsVirtual.csproj", "{268BB388-89AA-46BF-8894-F0B6EDCDE989}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceBaseSample", "04_OOSamples\InheritanceBaseSample\InheritanceBaseSample.csproj", "{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritFromObject", "04_OOSamples\InheritFromObject\InheritFromObject.csproj", "{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,10 +223,6 @@ Global
 		{50A81FE7-66D5-4467-B00F-43EDB2F4C65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A81FE7-66D5-4467-B00F-43EDB2F4C65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A81FE7-66D5-4467-B00F-43EDB2F4C65D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -245,6 +243,14 @@ Global
 		{268BB388-89AA-46BF-8894-F0B6EDCDE989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{268BB388-89AA-46BF-8894-F0B6EDCDE989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{268BB388-89AA-46BF-8894-F0B6EDCDE989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -282,12 +288,13 @@ Global
 		{15A94D59-73C9-4A5A-B593-5D18D88DF372} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{ECD1B017-B22C-435F-8776-784F38E7F3CA} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{50A81FE7-66D5-4467-B00F-43EDB2F4C65D} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
-		{3317A9F7-8BFA-467E-A3A5-9D289B3EB69B} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{4E7BE96A-7E8E-43A9-B64A-C0C2435B83A8} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{1021B197-BECF-431E-AD77-AD82A861AB43} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{B33B93F8-B969-4686-BD5A-DED25182CB67} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{933C7FEA-26F3-40A6-9AC7-14245E0C3112} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 		{268BB388-89AA-46BF-8894-F0B6EDCDE989} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
+		{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
+		{5E159C96-7763-4874-AC3A-4A84B2FFDC0B} = {7F9B85D7-43F7-420B-A8CE-FE078022A9BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5148EA7-C249-4D01-9545-C2D4363A05B0}
