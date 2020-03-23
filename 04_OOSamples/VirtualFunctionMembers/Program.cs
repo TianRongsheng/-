@@ -14,10 +14,20 @@ namespace VirtualFunctionMembers
                 Mortgage = 250000
             };
 
-            Asset a = mansion;
-            decimal d2 = mansion.Liability;      // 250000
-            Console.WriteLine(a.Liability) ;
-            Console.WriteLine(d2);
+            Stock msft = new Stock()
+            {
+                Name = "MSFT",
+                PurchasePrice = 20,
+                CurrentPrice = 30,
+                SharesOwned = 1000
+            };
+
+            /*  Asset a = mansion;
+              decimal d2 = mansion.Liability;      // 250000
+              Console.WriteLine(a.Liability);
+              Console.WriteLine(d2);*/
+            Asset a = msft;
+            Console.WriteLine(a.Liability);
         }
     }
 }
