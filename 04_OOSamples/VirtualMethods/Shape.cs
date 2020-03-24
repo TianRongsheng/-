@@ -19,7 +19,9 @@ namespace VirtualMethods
     public abstract class Shape
     {
         public Position Position { get; } = new Position();
-        public Size Size { get; } = new Size();
+
+      //  public Size Size { get; } = new Size();
+        public Size Size { get { return new Size(); } }
 
         public virtual void Draw() => WriteLine($"Shape with {Position} and {Size}");
 
