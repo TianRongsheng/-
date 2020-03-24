@@ -6,6 +6,14 @@ namespace InheritFromObject
     {
         static void Main()
         {
+/*
+            int a = 20;
+            int b = 30;
+            Console.WriteLine(a.ToString()+b.ToString());
+            Console.WriteLine(a.Equals(b));
+            Console.WriteLine(a==b);
+*/
+
             // Construct a Point object.
             var p1 = new Point(1, 2);
 
@@ -20,6 +28,7 @@ namespace InheritFromObject
 
             // The line below displays true because p1 and p2 refer to two different objects that have the same value.
             Console.WriteLine(Object.Equals(p1, p2));
+            Console.WriteLine(p1.Equals(p2));
 
             // The line below displays true because p1 and p3 refer to one object.
             Console.WriteLine(Object.ReferenceEquals(p1, p3));

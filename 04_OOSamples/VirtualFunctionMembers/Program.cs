@@ -13,7 +13,7 @@ namespace VirtualFunctionMembers
                 CurrentPrice = 200000,
                 Mortgage = 250000
             };
-
+            Console.WriteLine(mansion.ToString());
             Stock msft = new Stock()
             {
                 Name = "MSFT",
