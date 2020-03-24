@@ -9,5 +9,6 @@ namespace AbstractClassesAbstractMembers
         public long SharesOwned;       
         // Override like a virtual method.
         public override decimal NetValue => CurrentPrice * SharesOwned;
+
     }
 }
