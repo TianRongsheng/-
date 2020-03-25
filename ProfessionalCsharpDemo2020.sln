@@ -87,7 +87,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewVsVirtual", "04_OOSample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceBaseSample", "04_OOSamples\InheritanceBaseSample\InheritanceBaseSample.csproj", "{0DAD51F8-7E04-4E33-9382-17A5D60AA3C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritFromObject", "04_OOSamples\InheritFromObject\InheritFromObject.csproj", "{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritFromObject", "04_OOSamples\InheritFromObject\InheritFromObject.csproj", "{5E159C96-7763-4874-AC3A-4A84B2FFDC0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.新增语言表达解析", "00.新增语言表达解析", "{73CEF689-F1B0-491C-80A4-FB36E17ABDBA}"
+	ProjectSection(SolutionItems) = preProject
+		自动只读属性默认初始化.md = 自动只读属性默认初始化.md
+		自动属性默认初始化.md = 自动属性默认初始化.md
+		表达式为主体的属性.md = 表达式为主体的属性.md
+		表达式主体函数.md = 表达式主体函数.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
