@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Book.cs" />
-  </ItemGroup>
-
 </Project>

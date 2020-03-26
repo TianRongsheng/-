@@ -4,7 +4,7 @@ namespace VariableScopeSample3
 {
     class Program
     {
-        static int j = 20;
+      //  static int j = 20;
         static int Main(string[] args)
         {
             int j = 30;
