@@ -19,8 +19,9 @@ namespace GeneratingNamesWithArray
             return names;
         }
         static void PrintNames(string[] names)
-        {
-            foreach (string name in names)
+        {         
+          
+            foreach (var name in names)
             {
                 Console.WriteLine(name);
             }

@@ -16,7 +16,7 @@ namespace GeneratingNamesWithArrayList
             names.Add("Gamma");//不能约束加入到列表中的元素类型
             names.Add("Vlissides");
             names.Add("Johnson");
-            names.Add("Helm");
+            names.Add(100);
             return names;
         }
         static void PrintNames(ArrayList names)
@@ -25,6 +25,9 @@ namespace GeneratingNamesWithArrayList
             {
                 Console.WriteLine(name);
             }
+
+
+           
         }
     }
 }
