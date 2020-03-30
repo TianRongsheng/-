@@ -7,6 +7,7 @@ namespace Wrox.ProCSharp.Arrays
         static void Main()
         {
             SortInts();
+            Console.WriteLine();
             SortNames();
             Console.WriteLine();
             Person[] persons = GetPersons();
