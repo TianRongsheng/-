@@ -111,11 +111,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingNamesWithArray", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingNamesWithArrayList", "05_GenericsSamples\UsingArrayListGenerateNames\GeneratingNamesWithArrayList.csproj", "{E9B0C65E-2292-4292-856F-B1D9A3F6855C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingNamesWithStringCollection", "05_GenericsSamples\UsingStringCollectionAddNames\GeneratingNamesWithStringCollection.csproj", "{BB9B0F53-9207-404B-B812-2A6A2C86A2D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingNamesWithStringCollection", "05_GenericsSamples\UsingStringCollectionAddNames\GeneratingNamesWithStringCollection.csproj", "{BB9B0F53-9207-404B-B812-2A6A2C86A2D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingNamesWithListT", "05_GenericsSamples\GeneratingNamesWithListT\GeneratingNamesWithListT.csproj", "{A502FD11-9424-4861-B7DB-B1C1710A78BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingNamesWithListT", "05_GenericsSamples\GeneratingNamesWithListT\GeneratingNamesWithListT.csproj", "{A502FD11-9424-4861-B7DB-B1C1710A78BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyingElements", "05_GenericsSamples\CopyingElements\CopyingElements.csproj", "{0D0F5522-356E-492E-A79B-DD890D8B7B9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyingElements", "05_GenericsSamples\CopyingElements\CopyingElements.csproj", "{0D0F5522-356E-492E-A79B-DD890D8B7B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConstraints", "05_GenericsSamples\TypeConstraints\TypeConstraints.csproj", "{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -331,6 +333,10 @@ Global
 		{0D0F5522-356E-492E-A79B-DD890D8B7B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D0F5522-356E-492E-A79B-DD890D8B7B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D0F5522-356E-492E-A79B-DD890D8B7B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,6 +394,7 @@ Global
 		{BB9B0F53-9207-404B-B812-2A6A2C86A2D5} = {153C9E87-65E8-4312-87FA-AEFA409EF18D}
 		{A502FD11-9424-4861-B7DB-B1C1710A78BF} = {153C9E87-65E8-4312-87FA-AEFA409EF18D}
 		{0D0F5522-356E-492E-A79B-DD890D8B7B9D} = {153C9E87-65E8-4312-87FA-AEFA409EF18D}
+		{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F} = {153C9E87-65E8-4312-87FA-AEFA409EF18D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5148EA7-C249-4D01-9545-C2D4363A05B0}
