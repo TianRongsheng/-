@@ -10,13 +10,13 @@ namespace ActionAndFunc
         {
             Console.WriteLine("I have 3 methods.");
         }
-        public int Add(int a, int b)
+        public double Add(int a, int b)
         {
             int result = a + b;
             return result;
         }
 
-        public int Sub(int a, int b)
+        public double Sub(int a, int b)
         {
             int result = a - b;
             return result;

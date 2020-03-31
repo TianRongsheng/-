@@ -2,8 +2,8 @@
 {
     struct Currency
     {
-        public uint Dollars;
-        public ushort Cents;
+        public uint Dollars;//美元
+        public ushort Cents;//美分
 
         public Currency(uint dollars, ushort cents)
         {

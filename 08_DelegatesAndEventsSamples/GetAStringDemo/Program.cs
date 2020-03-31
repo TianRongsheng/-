@@ -2,21 +2,23 @@
 
 namespace GetAStringDemo
 {
+    //定义委托
+    //delegate 返回值类型 委托名（参数列表）
+     public  delegate string GetAString();
     class Program
     {
-        private delegate string GetAString();
-
+        //所有返回字符串的无参方法都可以跟下面的委托变量（实例）匹配
+   
         static void Main()
         {
             int x = 40;
-            GetAString firstStringMethod = new GetAString(x.ToString);
+            //生成委托变量实例firstStringMethod
+            //次候firstStringMethod作用等价于x.x.ToString
+            GetAString firstStringMethod = new GetAString(x.ToString); 
             Console.WriteLine($"String is {firstStringMethod()}");
-            // With firstStringMethod initialized to x.ToString(),
-            // the above statement is equivalent to saying
             // Console.WriteLine("String is {0}", x.ToString());
 
             var balance = new Currency(34, 50);
-
             // firstStringMethod references an instance method
             firstStringMethod = balance.ToString;
             Console.WriteLine($"String is {firstStringMethod()}");
