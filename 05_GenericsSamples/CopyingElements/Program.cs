@@ -21,8 +21,21 @@ namespace CopyingElements
             numbers.Add(5);
             numbers.Add(10);
             numbers.Add(20);
-            List<int> firstTwo = CopyAtMost<int>(numbers, 2);
+            List<Student> S = new List<Student>
+            {
+                new Student{ Name=1,Age=10},
+                new Student{ Name=2,Age=20},
+                new Student{ Name=3,Age=30}
+            };
+            List<Student> firstTwo = CopyAtMost(S, 3);
+            //Console.WriteLine(firstTwo.);
             Console.WriteLine(firstTwo.Count);
         }
+        class Student
+        {
+            public int Name { set; get; }
+            public int Age { set; get; }
+        }
+
     }
 }
