@@ -14,6 +14,6 @@
         public override string ToString() => $"{Name}, {Salary:C}";
 
         public static bool CompareSalary(Employee e1, Employee e2) =>
-          e1.Salary < e2.Salary;
+          e1.Salary > e2.Salary;
     }
 }

@@ -5,5 +5,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="多播.md" />
+  </ItemGroup>
+
 
 </Project>

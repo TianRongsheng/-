@@ -19,6 +19,7 @@ namespace Wrox.ProCSharp.Delegates
         {
             Action d1 = One;
             d1 += Two;
+            //获取调用列表
             Delegate[] delegates = d1.GetInvocationList();
             foreach (Action d in delegates)
             {
