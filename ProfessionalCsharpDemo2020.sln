@@ -176,6 +176,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDelegates", "08_Deleg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionAndFunc", "08_DelegatesAndEventsSamples\ActionAndFunc\ActionAndFunc.csproj", "{111DC422-F0A7-4598-B48D-7C1EB58BD820}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventOderDishesFullEditon", "08_DelegatesAndEventsSamples\EventOderDishesFullEditon\EventOderDishesFullEditon.csproj", "{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -490,6 +492,10 @@ Global
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -572,6 +578,7 @@ Global
 		{D50FC877-97FD-444F-918C-F9D321BBBC5C} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 		{E16AC0EA-23C2-4AD5-BA5E-02E1B8222178} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5148EA7-C249-4D01-9545-C2D4363A05B0}
