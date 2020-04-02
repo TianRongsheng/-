@@ -16,7 +16,7 @@ namespace Wrox.ProCSharp.Delegates
                 new Employee("RoadRunner", 50000)
             };
 
-            BubbleSorter.Sort(employees, Employee.CompareSalary);
+            BubbleSorter.Sort(employees, Employee.CompareName);
 
             foreach (var employee in employees)
             {
