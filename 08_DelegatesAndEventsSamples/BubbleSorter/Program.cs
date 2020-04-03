@@ -17,20 +17,23 @@ namespace Wrox.ProCSharp.Delegates
             };
 
             BubbleSorter.Sort<Employee>(employees, Employee.CompareSalary);
-           
-            
-            foreach (var employee in employees)
-            {
-                Console.WriteLine(employee);
-            }
+
+
+            //foreach (var employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+
+            BubbleSorter.Export(employees, Employee.Print);
             Console.WriteLine("------------NAME------------");
 
             BubbleSorter.Sort<Employee>(employees, Employee.CompareName);
 
-            foreach (var employee in employees)
-            {
-                Console.WriteLine(employee);
-            }
+            //foreach (var employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+            BubbleSorter.Export(employees, Employee.Print);
         }
     }
 }

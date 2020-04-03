@@ -20,8 +20,7 @@ namespace Wrox.ProCSharp.Delegates
             Console.WriteLine(oneParam("test"));
 
             Func<double, double, double> twoParams = (x, y) => x * y;
-            Console.WriteLine(twoParams(3, 2));
-
+            Console.WriteLine(twoParams(3, 2));         
             Func<double, double, double> twoParamsWithTypes = (double x, double y) => x * y;
             Console.WriteLine(twoParamsWithTypes(4, 2));
 
