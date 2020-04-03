@@ -16,8 +16,8 @@ namespace Wrox.ProCSharp.Delegates
         static void SimpleDemos()
         {
             Console.WriteLine(nameof(SimpleDemos));
-            Func<string, string> oneParam = s => $"change uppercase {s.ToUpper()}";
-            Console.WriteLine(oneParam("test"));
+            Func<string, string> oneParam = s => $"change uppercase {s.ToUpper()}";//返回此字符串转换为大写形式的副本
+            Console.WriteLine(oneParam("test"));//将小写test转换成大写TEST 
 
             Func<double, double, double> twoParams = (x, y) => x * y;
             Console.WriteLine(twoParams(3, 2));

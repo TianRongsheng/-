@@ -7,7 +7,6 @@ namespace Wrox.ProCSharp.Delegates
         static void Main()
         {
             string mid = ", middle part,";
-
             Func<string, string> anonDel = delegate (string param)
             {
                 param += mid;
