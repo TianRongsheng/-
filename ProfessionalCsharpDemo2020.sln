@@ -117,9 +117,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingNamesWithListT", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyingElements", "05_GenericsSamples\CopyingElements\CopyingElements.csproj", "{0D0F5522-356E-492E-A79B-DD890D8B7B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConstraints", "05_GenericsSamples\TypeConstraints\TypeConstraints.csproj", "{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeConstraints", "05_GenericsSamples\TypeConstraints\TypeConstraints.csproj", "{7DCF1BC0-D81C-4923-B78A-78C9AE1F8C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentManagerGenerics", "05_GenericsSamples\DocumentManagerGeneerics\DocumentManagerGenerics.csproj", "{43B8B247-DA4F-4B3C-AD87-E15CBA054554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentManagerGenerics", "05_GenericsSamples\DocumentManagerGeneerics\DocumentManagerGenerics.csproj", "{43B8B247-DA4F-4B3C-AD87-E15CBA054554}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06运算符和强类型转换", "06运算符和强类型转换", "{FAD6C273-CDC2-4649-9608-CA0BD0B681E6}"
 EndProject
@@ -174,7 +174,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegatesUsingInvo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDelegates", "08_DelegatesAndEventsSamples\SimpleDelegates\SimpleDelegates.csproj", "{E16AC0EA-23C2-4AD5-BA5E-02E1B8222178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionAndFunc", "08_DelegatesAndEventsSamples\ActionAndFunc\ActionAndFunc.csproj", "{111DC422-F0A7-4598-B48D-7C1EB58BD820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionAndFunc", "08_DelegatesAndEventsSamples\ActionAndFunc\ActionAndFunc.csproj", "{111DC422-F0A7-4598-B48D-7C1EB58BD820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventOderDishesFullEditon", "08_DelegatesAndEventsSamples\EventOderDishesFullEditon\EventOderDishesFullEditon.csproj", "{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventThresholdReached", "08_DelegatesAndEventsSamples\EventThresholdReached\EventThresholdReached.csproj", "{CDD3719E-9EC6-4EA5-8419-EDAC317F178D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -490,6 +494,14 @@ Global
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD3719E-9EC6-4EA5-8419-EDAC317F178D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD3719E-9EC6-4EA5-8419-EDAC317F178D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD3719E-9EC6-4EA5-8419-EDAC317F178D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD3719E-9EC6-4EA5-8419-EDAC317F178D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -572,6 +584,8 @@ Global
 		{D50FC877-97FD-444F-918C-F9D321BBBC5C} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 		{E16AC0EA-23C2-4AD5-BA5E-02E1B8222178} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 		{111DC422-F0A7-4598-B48D-7C1EB58BD820} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
+		{E7618DB1-16CE-40D3-8A10-2A379C83B5C5} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
+		{CDD3719E-9EC6-4EA5-8419-EDAC317F178D} = {60834EA9-D0CC-4854-B75A-7FAECEC1A791}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5148EA7-C249-4D01-9545-C2D4363A05B0}
