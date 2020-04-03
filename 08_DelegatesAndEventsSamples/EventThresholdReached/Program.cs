@@ -10,7 +10,7 @@ namespace EventThresholdReached
             c.ThresholdReached += c_ThresholdReached;
 
             Console.WriteLine("press 'a' key to increase total");
-            while (Console.ReadKey(true).KeyChar == 'a')
+            while (Console.ReadKey(true).KeyChar == 'a')//Console.ReadKey()获取用户按下的下一个字符或功能键。此处用于判断输出是否为a
             {
                 Console.WriteLine("adding one");
                 c.Add(1);
