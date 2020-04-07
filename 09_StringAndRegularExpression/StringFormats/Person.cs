@@ -29,6 +29,7 @@ namespace StringFormats
                     return FirstName;
                 case "L":
                     return LastName;
+                case "C": return $"{LastName} {FirstName}";             
                 default:
                     throw new FormatException($"invalid format string {format}");
             }

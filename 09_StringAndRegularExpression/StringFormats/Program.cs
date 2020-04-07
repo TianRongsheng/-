@@ -19,7 +19,7 @@ namespace StringFormats
         static void UseCustomIFormattable()
         {
             var p1 = new Person("Stephanie", "Nagel");
-            Console.WriteLine(p1.ToString("F"));
+            Console.WriteLine(p1.ToString("C"));
             Console.WriteLine($"{p1:F}");
         }
 
@@ -38,8 +38,7 @@ namespace StringFormats
 
             var day = new DateTime(2025, 2, 14);
             Console.WriteLine($"{day:d}");
-            Console.WriteLine(Invariant($"{day:d}"));
-
+            Console.WriteLine(Invariant($"{day:d}"));           
             string a1 = "a";
             int a2 = 3;
             double a3 = 3.4;

@@ -1,17 +1,17 @@
-﻿namespace Wrox.ProCSharp.Delegates
+﻿using System.Runtime.CompilerServices;
+
+namespace Wrox.ProCSharp.Delegates
 {
     class Program
     {
         static void Main()
         {
             var dealer = new CarDealer();
+            var valtteri = new Consumer("Valtteri");      
 
-            var valtteri = new Consumer("Valtteri");
-            dealer.NewCarInfo += valtteri.NewCarIsHere;
-
-            dealer.NewCar("Williams");
-
+           dealer.NewCarInfo += valtteri.NewCarIsHere;
             var max = new Consumer("Max");
+
             dealer.NewCarInfo += max.NewCarIsHere;
 
             dealer.NewCar("Mercedes");
