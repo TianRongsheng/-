@@ -8,19 +8,19 @@ namespace StringFormats
     {
         static void Main()
         {
-            FormattedStringDemo();
+            //FormattedStringDemo();
             DateAndNumbers();
-            FormattedStringDemo();
-            MoreFormattableString();
-            UseCustomIFormattable();
+            //FormattedStringDemo();
+            //MoreFormattableString();
+            //UseCustomIFormattable();
             Console.ReadLine();
         }
 
         static void UseCustomIFormattable()
         {
             var p1 = new Person("Stephanie", "Nagel");
-            Console.WriteLine(p1.ToString("F"));
-            Console.WriteLine($"{p1:F}");
+            Console.WriteLine(p1.ToString("L"));
+            Console.WriteLine($"{p1:L}");
         }
 
         public static void FormattedStringDemo()
@@ -34,11 +34,11 @@ namespace StringFormats
             string s2 = "World";
 
             Console.WriteLine(formatString, s2);
-            Console.WriteLine($"{today:D}");
+            Console.WriteLine($"{today:d}");//：D可用于清除日期格式后面的具体时间
 
             var day = new DateTime(2025, 2, 14);
             Console.WriteLine($"{day:d}");
-            Console.WriteLine(Invariant($"{day:d}"));
+            Console.WriteLine(Invariant($"{day:d}"));//Invariant返回一个结果字符串，其参数可以通过固定区域性的约定格式化。
 
             string a1 = "a";
             int a2 = 3;
@@ -62,11 +62,11 @@ namespace StringFormats
         
         public static void ShowDetails(FormattableString s)
         {
-            Console.WriteLine($"argument count: {s.ArgumentCount}");
+            Console.WriteLine($"argument count: {s.ArgumentCount}");//统计
             Console.WriteLine($"format: {s.Format}");
             for (int i = 0; i < s.ArgumentCount; i++)
             {
-                Console.WriteLine($"Argument {i}: {s.GetArgument(i)}");
+                Console.WriteLine($"Argument {i}: {s.GetArgument(i)}");//GetArgument：返回这个Argument
             }
         }
 
