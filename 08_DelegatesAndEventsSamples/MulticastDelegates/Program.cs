@@ -10,8 +10,8 @@ namespace MulticastDelegates
             operations += MathOperations.Square;
 
             ProcessAndDisplayNumber(operations, 2.0);
-            ProcessAndDisplayNumber(operations, 7.94);
-            ProcessAndDisplayNumber(operations, 1.414);
+        //    ProcessAndDisplayNumber(operations, 7.94);
+         //   ProcessAndDisplayNumber(operations, 1.414);
             Console.WriteLine();
         }
 
