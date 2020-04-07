@@ -6,6 +6,7 @@ namespace EventStock
 {
     public class ProductStock
     {
+       
         public ProductStock(String name, int inventory)
         {
             Name = name;
@@ -41,7 +42,9 @@ namespace EventStock
             DealsAreDone?.Invoke(this, msgArg);
         }
 
+        //余额不足事件
         public event EventHandler<MessageEventArgs> UnderStock;
+        //余额充足，交易成功
         public event EventHandler<MessageEventArgs> DealsAreDone;
       
         void UnderStockHandler(object sender, MessageEventArgs e)
