@@ -43,16 +43,19 @@ namespace EventStock
 
         public event EventHandler<MessageEventArgs> UnderStock;
         public event EventHandler<MessageEventArgs> DealsAreDone;
-
+      
         void UnderStockHandler(object sender, MessageEventArgs e)
         {
             ProductStock ps = (ProductStock)sender;
-            Console.WriteLine($"{e.Consumer}购买{e.Amount}份{ps.Name}，交易成功！{ps.Name},{DateTime.Now}库存{ps.GetInventory()}");
+            Console.WriteLine($"{e.Consumer}欲购买{e.Amount}份{ps.Name}，库存不足！{ps.Name},{DateTime.Now}库存{ps.GetInventory()}");
+
         }
         void DealsAreDoneHandler(object sender, MessageEventArgs e)
         {
             ProductStock ps = (ProductStock)sender;
-            Console.WriteLine($"{e.Consumer}欲购买{e.Amount}份{ps.Name}，库存不足！{ps.Name},{DateTime.Now}库存{ps.GetInventory()}");
+            Console.WriteLine($"{e.Consumer}购买{e.Amount}份{ps.Name}，交易成功！{ps.Name},{DateTime.Now}库存{ps.GetInventory()}");
         }
+
+
     }
 }

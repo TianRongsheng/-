@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace EventStock
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
@@ -19,8 +19,10 @@ namespace EventStock
             
             Thread.Sleep(2000);
             Consumer cm3 = new Consumer("王五");
-            cm3.Buy(ps, 4);
+            cm3.Buy(ps, 1);
+
         }
+
 
     }
 }

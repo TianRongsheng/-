@@ -4,10 +4,10 @@
     {
         public FindCountry(string country)
         {
-            _country = country;
+            _country = country;//国家
         }
 
-        private readonly string _country;
+        private readonly string _country;//只读
 
         public bool FindCountryPredicate(Racer racer) 
         {

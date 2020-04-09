@@ -41,6 +41,7 @@ namespace StringSample
 
         public static void SimpleStrings()
         {
+            
             string greetingText = "Hello from all the people at Wrox Press. ";
             greetingText += "We do hope you enjoy this book as much as we enjoyed writing it.";
 

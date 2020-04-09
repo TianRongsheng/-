@@ -36,8 +36,8 @@ namespace ListSamples
                 Console.WriteLine(r);
             }
 
-            // searching
-            int index1 = racers.IndexOf(mario);
+            // searching搜索
+            int index1 = racers.IndexOf(mario);//IndexOf（T）搜索指定的对象，并返回整个 List<T> 中第一个匹配项的从零开始的索引。
             int index2 = racers.FindIndex(new FindCountry("Finland").FindCountryPredicate);
             int index3 = racers.FindIndex(r => r.Country == "Finland");
             Racer racer = racers.Find(r => r.FirstName == "Niki");
@@ -52,7 +52,7 @@ namespace ListSamples
 
             // remove elements
 
-            if (!racers.Remove(graham))
+            if (racers.Remove(graham))//List<T>.Remove(T) 方法，从 List<T> 中移除特定对象的第一个匹配项。
             {
                 Console.WriteLine("object not found in collection");
             }

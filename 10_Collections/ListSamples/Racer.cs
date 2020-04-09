@@ -8,10 +8,10 @@ namespace ListSamples
         public Racer(int id, string firstName, string lastName, string country, int wins)
         {
             Id = id;
-            FirstName = firstName;
-            LastName = lastName;
-            Country = country;
-            Wins = wins;
+            FirstName = firstName;//名字
+            LastName = lastName;//姓
+            Country = country;//国家
+            Wins = wins;//服务器
         }
 
         public Racer(int id, string firstName, string lastName, string country)
@@ -26,7 +26,7 @@ namespace ListSamples
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName}";
+            return $"{FirstName} {LastName} {Country}";
         }
        
 

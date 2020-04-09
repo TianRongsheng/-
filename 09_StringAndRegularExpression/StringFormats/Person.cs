@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 
 namespace StringFormats
 {
@@ -14,10 +14,7 @@ namespace StringFormats
         }
 
         public override string ToString() => FirstName + " " + LastName;
-
         public virtual string ToString(string format) => ToString(format, null);
-
-
         public string ToString(string format, IFormatProvider formatProvider)
         {
             switch (format)
@@ -29,6 +26,7 @@ namespace StringFormats
                     return FirstName;
                 case "L":
                     return LastName;
+                case "C": return $"{LastName} {FirstName}";             
                 default:
                     throw new FormatException($"invalid format string {format}");
             }
