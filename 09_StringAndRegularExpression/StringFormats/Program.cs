@@ -18,8 +18,9 @@ namespace StringFormats
 
         static void UseCustomIFormattable()
         {
-            var p1 = new Person("Stephanie", "Nagel");
-            Console.WriteLine(p1.ToString("C"));
+            var p1 = new Person("张", "三");
+     
+            Console.WriteLine(p1.ToString("A",null));
             Console.WriteLine($"{p1:F}");
         }
 
@@ -33,8 +34,9 @@ namespace StringFormats
             string formatString = $"{s}, {{0}}";
             string s2 = "World";
 
-            Console.WriteLine(formatString, s2);
+            Console.WriteLine(formatString, s2);           
             Console.WriteLine($"{today:D}");
+            
 
             var day = new DateTime(2025, 2, 14);
             Console.WriteLine($"{day:d}");

@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 namespace DataLib
 {
-    /// <summary>  
-    ///实现了IFormattable 接口，以支持格式字符串的不同变体，
-    ///实现了IComparable<Racer>接口，它根据Lastname为赛车手排序。
-    /// </summary>
     public class Racer : IComparable<Racer>, IFormattable
     {
 
@@ -17,9 +13,7 @@ namespace DataLib
             Country = country;
             Starts = starts;
             Wins = wins;
-            //多值属性Years 属性列出了赛车手获得冠军的年份，一些赛车手曾多次获得冠军。
             Years = years != null ? new List<int>(years) : new List<int>();
-            //Cars 属性用于列出赛车手在获得冠军的年份中使用的所有车型
             Cars = cars != null ? new List<string>(cars) : new List<string>();
         }
         public Racer(string firstName, string lastName, string country, int starts, int wins)
@@ -32,23 +26,12 @@ namespace DataLib
         public int Starts { get; }
         public IEnumerable<string> Cars { get; }
         public IEnumerable<int> Years { get; }
-        
-        //重载的ToString0方法，该方法以字符串格式显示赛车手。
-        public override string ToString()
-        { 
-        return $"{FirstName} {LastName}";
-        }
 
+        public override string ToString() => $"{FirstName} {LastName}";
 
-        public int CompareTo(Racer other)
-        {
-            return LastName.CompareTo(other?.LastName);
-        }
+        public int CompareTo(Racer other) => LastName.CompareTo(other?.LastName);
 
-        public string ToString(string format)
-        {
-            return ToString(format, null);
-        }
+        public string ToString(string format) => ToString(format, null);
 
         public string ToString(string format, IFormatProvider formatProvider)
         {

@@ -28,18 +28,29 @@ namespace ListSamples
 
             for (int i = 0; i < racers.Count; i++)
             {
-                Console.WriteLine(racers[i]);
+                Console.WriteLine($"{racers[i]:A}");
             }
-
+            Console.WriteLine("-----------------");
+            racers.Sort(new RacerComparer(CompareType.Wins));
             foreach (var r in racers)
             {
-                Console.WriteLine(r);
+                Console.WriteLine($"{r:A}");
             }
 
+            int index5=racers.BinarySearch(5, 2, mario, new RacerComparer(CompareType.Wins));
+            Console.WriteLine(index5);
+           
+
             // searching
-            int index1 = racers.IndexOf(mario);
-            int index2 = racers.FindIndex(new FindCountry("Finland").FindCountryPredicate);
+            int index1 = racers.IndexOf(mario,2,4);
+            Console.WriteLine(index1);
+            Console.WriteLine(index1);
+            //按条件检索，条件--》Predicate<T>
+            var fc = new FindCountry("Finland");
+            int index2 = racers.FindIndex(fc.FindCountryPredicate);
             int index3 = racers.FindIndex(r => r.Country == "Finland");
+            int index4 = racers.FindIndex(r => r.Wins == 12);
+
             Racer racer = racers.Find(r => r.FirstName == "Niki");
             List<Racer> bigWinners = racers.FindAll(r => r.Wins > 20);
             foreach (Racer r in bigWinners)
@@ -49,7 +60,7 @@ namespace ListSamples
 
             Console.WriteLine();
 
-
+        
             // remove elements
 
             if (!racers.Remove(graham))
@@ -61,5 +72,7 @@ namespace ListSamples
                new Racer(12, "Jochen", "Rindt", "Austria", 6),
                new Racer(22, "Ayrton", "Senna", "Brazil", 41) });
         }
+
+        
     }
 }

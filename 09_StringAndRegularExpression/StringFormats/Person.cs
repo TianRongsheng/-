@@ -13,9 +13,16 @@ namespace StringFormats
             LastName = lastName;
         }
 
-        public override string ToString() => FirstName + " " + LastName;
+        public override string ToString()
+        { 
+        return FirstName + " " + LastName;
+        }     
 
-        public virtual string ToString(string format) => ToString(format, null);
+        public virtual string ToString(string format)
+        {
+          return  ToString(format, null);
+        }
+        
 
 
         public string ToString(string format, IFormatProvider formatProvider)

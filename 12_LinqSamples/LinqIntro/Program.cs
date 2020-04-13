@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace LinqIntro
 {
@@ -9,8 +10,12 @@ namespace LinqIntro
     {
         static void Main()
         {
+
+            //LINQ查询
             LINQQuery();
+            //扩展方法
             ExtensionMethods();
+            //延迟查询
             DeferredQuery();
         }
 
@@ -43,6 +48,7 @@ namespace LinqIntro
             Console.WriteLine();
         }
 
+
         static void ExtensionMethods()
         {
             var champions = new List<Racer>(Formula1.GetChampions());
@@ -61,6 +67,11 @@ namespace LinqIntro
 
         static void LINQQuery()
         {
+            //LINQ查询
+            //查询来自巴西的所有世界冠军，并按照夺冠次数排序。
+            //可以使用List<T> 类的方法，如FindAll0和Sort方法。
+            //也可以使用LINQ的语
+
             var query = from r in Formula1.GetChampions()
                         where r.Country == "Brazil"
                         orderby r.Wins descending

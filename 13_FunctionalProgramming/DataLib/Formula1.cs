@@ -6,13 +6,11 @@ namespace DataLib
     {
         private static List<Racer> s_racers;
 
-        private static List<Racer> InitializeRacers()
-        {
-            return
-              new List<Racer>
-              {
+        private static List<Racer> InitializeRacers() =>
+            new List<Racer>
+            {
                 new Racer("Nino", "Farina", "Italy", 33, 5, new int[] { 1950 }, new string[] { "Alfa Romeo" }),
-                new Racer("Alberto", "Ascari", "Italy", 32, 13, new int[] { 1952, 1953 }, new string[] { "Ferrari" }),
+                new Racer("Alberto", "Ascari", "Italy", 32, 10, new int[] { 1952, 1953 }, new string[] { "Ferrari" }),
                 new Racer("Juan Manuel", "Fangio", "Argentina", 51, 24, new int[] { 1951, 1954, 1955, 1956, 1957 }, new string[] { "Alfa Romeo", "Maserati", "Mercedes", "Ferrari" }),
                 new Racer("Mike", "Hawthorn", "UK", 45, 3, new int[] { 1958 }, new string[] { "Ferrari" }),
                 new Racer("Phil", "Hill", "USA", 48, 3, new int[] { 1961 }, new string[] { "Ferrari" }),
@@ -38,20 +36,17 @@ namespace DataLib
                 new Racer("Jacques", "Villeneuve", "Canada", 165, 11, new int[] { 1997 }, new string[] { "Williams" }),
                 new Racer("Mika", "Hakkinen", "Finland", 160, 20, new int[] { 1998, 1999 }, new string[] { "McLaren" }),
                 new Racer("Michael", "Schumacher", "Germany", 287, 91, new int[] { 1994, 1995, 2000, 2001, 2002, 2003, 2004 }, new string[] { "Benetton", "Ferrari" }),
-                new Racer("Fernando", "Alonso", "Spain", 291, 32, new int[] { 2005, 2006 }, new string[] { "Renault" }),
-                new Racer("Kimi", "Räikkönen", "Finland", 271, 20, new int[] { 2007 }, new string[] { "Ferrari" }),
-                new Racer("Lewis", "Hamilton", "UK", 208, 62, new int[] { 2008, 2014, 2015, 2017 }, new string[] { "McLaren", "Mercedes" }),
+                new Racer("Fernando", "Alonso", "Spain", 279, 33, new int[] { 2005, 2006 }, new string[] { "Renault" }),
+                new Racer("Kimi", "Räikkönen", "Finland", 260, 20, new int[] { 2007 }, new string[] { "Ferrari" }),
+                new Racer("Lewis", "Hamilton", "UK", 196, 56, new int[] { 2008, 2014, 2015 }, new string[] { "McLaren", "Mercedes" }),
                 new Racer("Jenson", "Button", "UK", 306, 16, new int[] { 2009 }, new string[] { "Brawn GP" }),
-                new Racer("Sebastian", "Vettel", "Germany", 198, 47, new int[] { 2010, 2011, 2012, 2013 }, new string[] { "Red Bull Racing" }),
+                new Racer("Sebastian", "Vettel", "Germany", 186, 45, new int[] { 2010, 2011, 2012, 2013 }, new string[] { "Red Bull Racing" }),
                 new Racer("Nico", "Rosberg", "Germany", 207, 24, new int[] { 2016 }, new string[] { "Mercedes" })
-              };
-            }
-        //获取车手冠军列表（1950-2017）
-        public static IList<Racer> GetChampions()
-        { return s_racers ?? (s_racers = InitializeRacers()); }
+            };
+
+        public static IList<Racer> GetChampions() => s_racers ?? (s_racers = InitializeRacers());
 
         private static List<Team> s_teams;
-        //获取车商冠军列表（1958-2017）
         public static IList<Team> GetConstructorChampions()         
         {
             if (s_teams == null)
@@ -72,15 +67,13 @@ namespace DataLib
                     new Team("Renault", 2005, 2006 ),
                     new Team("Brawn GP", 2009),
                     new Team("Red Bull Racing", 2010, 2011, 2012, 2013),
-                    new Team("Mercedes", 2014, 2015, 2016, 2017)
+                    new Team("Mercedes", 2014, 2015, 2016)
                 };
             }
             return s_teams;
         }
-     
+
         private static List<Championship> s_championships;
-       
-        //获取历年锦标赛赛况（冠亚季军名单）列表
         public static IEnumerable<Championship> GetChampionships()
         {
             if (s_championships == null)
@@ -153,8 +146,7 @@ namespace DataLib
                     new Championship(2013, "Sebastian Vettel", "Fernando Alonso", "Mark Webber"),
                     new Championship(2014, "Lewis Hamilton", "Nico Rosberg", "Daniel Ricciardo"),
                     new Championship(2015, "Lewis Hamilton", "Nico Rosberg", "Sebastian Vettel"),
-                    new Championship(2016, "Nico Rosberg", "Lewis Hamilton", "Daniel Ricciardo"),
-                    new Championship(2017, "Lewis Hamilton", "Sebastian Vettel", "Valtteri Bottas")
+                    new Championship(2016, "Nico Rosberg", "Lewis Hamilton", "Daniel Ricciardo")
                 };
             }
             return s_championships;
@@ -195,10 +187,9 @@ namespace DataLib
                 _moreRacers.Add(new Racer("Eddie", "Irvine", "UK", starts: 147, wins: 4));
                 _moreRacers.Add(new Racer("Rubens", "Barrichello", "Brazil", starts: 322, wins: 11));
                 _moreRacers.Add(new Racer("Juan Pablo", "Montoya", "Columbia", starts: 94, wins: 7));
-                _moreRacers.Add(new Racer("Felipe", "Massa", "Brazil", starts: 269, wins: 11));
+                _moreRacers.Add(new Racer("Felipe", "Massa", "Brazil", starts: 258, wins: 11));
                 _moreRacers.Add(new Racer("Mark", "Webber", "Australia", starts: 215, wins: 9));
-                _moreRacers.Add(new Racer("Daniel", "Ricciardo", "Australia", starts: 129, wins: 5));
-                _moreRacers.Add(new Racer("Valtteri", "Bottas", "Finland", starts: 97, wins: 3));
+                _moreRacers.Add(new Racer("Daniel", "Ricciardo", "Australia", starts: 117, wins: 5));
             }
             return _moreRacers;
         }

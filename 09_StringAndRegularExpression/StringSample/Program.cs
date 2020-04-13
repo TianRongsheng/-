@@ -30,6 +30,7 @@ namespace StringSample
 
             for (int i = 'Z'; i >= 'A'; i--)
             {
+            
                 char old1 = (char)i;
                 char new1 = (char)(i + 1);
                 greetingBuilder = greetingBuilder.Replace(old1, new1);

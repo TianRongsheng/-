@@ -27,8 +27,7 @@ namespace ListSamples
         public override string ToString()
         {
             return $"{FirstName} {LastName}";
-        }
-       
+        }       
 
 
         public string ToString(string format, IFormatProvider formatProvider)
@@ -62,6 +61,8 @@ namespace ListSamples
 
         public int CompareTo(Racer other)
         {
+         
+            //比较姓 名
             int compare = LastName?.CompareTo(other?.LastName) ?? -1;
             if (compare == 0)
             {
