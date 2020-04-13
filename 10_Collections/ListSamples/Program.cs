@@ -11,7 +11,7 @@ namespace ListSamples
             var emerson = new Racer(13, "Emerson", "Fittipaldi", "Brazil", 14);
             var mario = new Racer(16, "Mario", "Andretti", "USA", 12);
 
-            var racers = new List<Racer>(20) { graham, emerson, mario };
+            var racers = new List<Racer>(20) { graham, emerson, mario };//20代表容量
 
             racers.Add(new Racer(24, "Michael", "Schumacher", "Germany", 91));
             racers.Add(new Racer(27, "Mika", "Hakkinen", "Finland", 20));
@@ -39,7 +39,9 @@ namespace ListSamples
             // searching搜索
             int index1 = racers.IndexOf(mario);//IndexOf（T）搜索指定的对象，并返回整个 List<T> 中第一个匹配项的从零开始的索引。
             int index2 = racers.FindIndex(new FindCountry("Finland").FindCountryPredicate);
+            Console.WriteLine(index2.ToString());
             int index3 = racers.FindIndex(r => r.Country == "Finland");
+            int index4 = racers.FindIndex(r => r.Wins == 51);
             Racer racer = racers.Find(r => r.FirstName == "Niki");
             List<Racer> bigWinners = racers.FindAll(r => r.Wins > 20);
             foreach (Racer r in bigWinners)

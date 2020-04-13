@@ -2,7 +2,7 @@
 
 namespace ListSamples
 {
-    public class Racer : IComparable<Racer>, IFormattable
+    public class Racer : IComparable<Racer>, IFormattable//IFormattable提供一种功能，用以将对象的值格式化为字符串表示形式。
     {
        
         public Racer(int id, string firstName, string lastName, string country, int wins)

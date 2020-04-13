@@ -6,13 +6,13 @@ namespace Wrox.ProCSharp.Arrays
     {
         static void Main()
         {
-            SortInts();
-            Console.WriteLine();
-            SortNames();
-            Console.WriteLine();
+            //SortInts();
+            //Console.WriteLine();
+            //SortNames();
+            //Console.WriteLine();
             Person[] persons = GetPersons();
-            SortPersons(persons);
-            Console.WriteLine();
+            //SortPersons(persons);
+            //Console.WriteLine();
             SortUsingPersonComparer(persons);
         }
 
