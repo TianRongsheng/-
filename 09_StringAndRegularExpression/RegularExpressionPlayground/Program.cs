@@ -5,6 +5,7 @@ namespace RegularExpressionPlayground
 {
     class Program
     {
+        //
         const string text =
             "Professional C# 6 and .NET Core 1.0 provides complete coverage " +
             "of the latest updates, features, and capabilities, giving you " +

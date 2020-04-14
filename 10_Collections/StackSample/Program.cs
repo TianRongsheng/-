@@ -7,7 +7,9 @@ namespace StackSample
     {
         static void Main()
         {
-            var alphabet = new Stack<char>();
+            
+               
+             var alphabet = new Stack<char>();
             alphabet.Push('A');
             alphabet.Push('B');
             alphabet.Push('C');
