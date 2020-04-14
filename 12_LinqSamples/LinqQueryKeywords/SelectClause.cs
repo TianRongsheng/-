@@ -19,6 +19,7 @@ namespace LinqQueryKeywords
                 where score > 80
                 select score;
 
+            var queryHighScoresTest = Scores.Select(n => n < 80);
             // Execute the query.
             foreach (int i in queryHighScores)
             {
@@ -49,6 +50,8 @@ namespace LinqQueryKeywords
                 where student.ID > 111
                 select student.LastName;
 
+
+            var studentQuery2Test = students.Where(n=>n.ID>111).Select(n =>n.LastName);
             Console.WriteLine("\r\n studentQuery2: select range_variable.Property");
             foreach (string s in studentQuery2)
             {
@@ -61,6 +64,8 @@ namespace LinqQueryKeywords
                 from student in students
                 where student.ID > 111
                 select student.GetContactInfo(contactList);
+
+            var studentQuery3Test = students.Where(n => n.ID > 111).Select(n => n.GetContactInfo(contactList));
 
             Console.WriteLine("\r\n studentQuery3: select range_variable.Method");
             foreach (ContactInfo ci in studentQuery3)
@@ -75,6 +80,8 @@ namespace LinqQueryKeywords
                 where student.ID > 111
                 select student.Scores[0];
 
+            var studentQuery4Test= students.Where(n => n.ID > 111).Select(n => n.Scores[0]);
+
             Console.WriteLine("\r\n studentQuery4: select range_variable[index]");
             foreach (int i in studentQuery4)
             {
@@ -87,6 +94,8 @@ namespace LinqQueryKeywords
                 from student in students
                 where student.ID > 111
                 select student.Scores[0] * 1.1;
+
+            var studentQuery5Test = students.Where(n => n.ID > 111).Select(n => n.Scores[0]*1.1);
 
             Console.WriteLine("\r\n studentQuery5: select expression");
             foreach (double d in studentQuery5)
@@ -101,6 +110,8 @@ namespace LinqQueryKeywords
                 where student.ID > 111
                 select student.Scores.Average();
 
+            var studentQuery6Test = students.Where(n => n.ID > 111).Select(n => n.Scores.Average());
+
             Console.WriteLine("\r\n studentQuery6: select expression2");
             foreach (double d in studentQuery6)
             {
@@ -113,6 +124,8 @@ namespace LinqQueryKeywords
                 from student in students
                 where student.ID > 111
                 select new { student.FirstName, student.LastName };
+
+            var studentQuery7Test = students.Where(n => n.ID > 111).Select(n => n.FirstName).Select(n=>n.Length);
 
             Console.WriteLine("\r\n studentQuery7: select new anonymous type");
             foreach (var item in studentQuery7)
@@ -132,6 +145,7 @@ namespace LinqQueryKeywords
                     Average = student.Scores.Average(),
                     ID = student.ID
                 };
+
 
             Console.WriteLine("\r\n studentQuery8: select new named type");
             foreach (ScoreInfo si in studentQuery8)

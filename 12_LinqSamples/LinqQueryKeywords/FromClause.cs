@@ -18,6 +18,8 @@ namespace LinqQueryKeywords
                           where num < 5
                           select num;
 
+
+            var lowNumsTest = numbers.Where(n => n < 5);
             // Execute the query.
             foreach (int i in lowNums)
             {
@@ -34,6 +36,8 @@ namespace LinqQueryKeywords
                              from score in student.Scores
                              where score > 90
                              select new { Last = student.LastName, score };
+
+            var scoreQueryTest = students.Select(n => n.Scores.Where(n=> n > 90));//有问题
 
             // Execute the queries.
             Console.WriteLine("scoreQuery:");

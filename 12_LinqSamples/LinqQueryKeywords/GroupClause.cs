@@ -20,6 +20,8 @@ namespace LinqQueryKeywords
                 group student by student.LastName[0] into g
                 orderby g.Key
                 select g;
+
+            var studentQueryTest = students.GroupBy(n => n.LastName[0]).OrderBy(n => n.Key);
             // Iterate group items with a nested foreach. This IGrouping encapsulates
             // a sequence of Student objects, and a Key of type char.
             // For convenience, var can also be used in the foreach statement.
@@ -42,6 +44,7 @@ namespace LinqQueryKeywords
                 from student in students
                 group student by student.Scores.Average() >= 80; //pass or fail!
 
+            var booleanGroupQueryTest = students.GroupBy(n => n.Scores.Average() >= 80);
             // Execute the query and access items in each group
             foreach (var studentGroup in booleanGroupQuery)
             {

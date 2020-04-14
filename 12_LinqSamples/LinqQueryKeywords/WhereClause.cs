@@ -18,6 +18,7 @@ namespace LinqQueryKeywords
                 where num < 5 && num % 2 == 0
                 select num;
 
+            var queryLowNums2Test = numbers.Where(n => n < 5 && n % 2 == 0);
             // Execute the query
             foreach (var s in queryLowNums2)
             {
@@ -32,6 +33,7 @@ namespace LinqQueryKeywords
                 where num % 2 == 0
                 select num;
 
+            var queryLowNums3Test = numbers.Where(n => n < 5 && n % 2 == 0);
             // Execute the query
             foreach (var s in queryLowNums3)
             {
@@ -51,6 +53,7 @@ namespace LinqQueryKeywords
                 where IsEven(num)
                 select num;
 
+            var queryEvenNumsTest = numbers.Where(n => IsEven(n));
             // Execute the query.
             foreach (var s in queryEvenNums)
             {

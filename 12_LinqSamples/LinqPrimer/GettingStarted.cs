@@ -45,10 +45,10 @@ namespace LinqPrimer
         {
             string[] names = { "Tom", "Dick", "Harry", "Mary", "Jay" };
             IEnumerable<string> query = names
-            .Where(n => n.Contains("a"))
-            .OrderBy(n => n.Length)
-            .Select(n => n.ToUpper());
-            foreach (string name in query) Console.WriteLine(name);
+            .Where(n => n.Contains("a"))//筛选带有a的单词
+            .OrderBy(n => n.Length)//以单词长度排序
+            .Select(n => n.ToUpper());//将筛选过后的结果用大写来表示
+            foreach (string name in query)Console.WriteLine(name);
 
             //写成查询表达式
         }
@@ -56,8 +56,8 @@ namespace LinqPrimer
         public static void MixedSyntaxQueries()
         {
             string[] names = { "Tom", "Dick", "Harry", "Mary", "Jay" };
-            int matches = (from n in names where n.Contains("a") select n).Count();
-            string first = (from n in names orderby n select n).First();
+            int matches = (from n in names where n.Contains("a") select n).Count();//统计字符串中带有a的单词数量
+            string first = (from n in names orderby n select n).First();//First返回序列中的第一个元素。
             Console.WriteLine($"{matches},{first}");
         }
 

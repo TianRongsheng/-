@@ -11,5 +11,13 @@ namespace ExtensionMethodsS
             if (string.IsNullOrEmpty(s)) return false;
             return char.IsUpper(s[0]);
         }
+        public static string Getstar(this string a,int b)
+        {
+            for (int n = 0; n < b; n++)
+            {
+                a += "*";
+            }
+            return a;
+        }
     }
 }
