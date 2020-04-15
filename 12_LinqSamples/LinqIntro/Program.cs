@@ -70,7 +70,11 @@ namespace LinqIntro
             //LINQ查询
             //查询来自巴西的所有世界冠军，并按照夺冠次数排序。
             //可以使用List<T> 类的方法，如FindAll0和Sort方法。
+
+
+
             //也可以使用LINQ的语
+
 
             var query = from r in Formula1.GetChampions()
                         where r.Country == "Brazil"

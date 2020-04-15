@@ -39,10 +39,14 @@ namespace EnumerableSample
                                  orderby r.LastName
                                  select $"{r.FirstName} {r.LastName}";
 
+            var x = Formula1.GetChampions().ToList().Where(r => r.Cars.Contains("Ferrari")).OrderBy(r=>r.LastName).Select((r)=>$"{r.FirstName} {r.LastName}");
+
+
             foreach (var racer in ferrariDrivers)
             {
                 Console.WriteLine(racer);
             }
+
         }
 
         public static void CompoundFromWithMethods()

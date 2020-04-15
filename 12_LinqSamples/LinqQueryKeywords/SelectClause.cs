@@ -161,6 +161,8 @@ namespace LinqQueryKeywords
                 join ci in contactList on student.ID equals ci.ID
                 select ci;
 
+            //var studentQuery9Test = students.Where(n => n.Scores.Average()>85).Join(contactList)
+
             Console.WriteLine("\r\n studentQuery9: select result of join clause");
             foreach (ContactInfo ci in studentQuery9)
             {

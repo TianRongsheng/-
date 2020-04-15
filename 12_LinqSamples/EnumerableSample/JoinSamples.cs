@@ -60,6 +60,9 @@ namespace EnumerableSample
                              Name = r.FirstName + " " + r.LastName
                          };
 
+            var racers1 = Formula1.GetChampions().Select(r => r.Years);
+
+
             var teams = from t in Formula1.GetConstructorChampions()
                         from y in t.Years
                         select new

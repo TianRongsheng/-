@@ -45,6 +45,10 @@ namespace EnumerableSample
                          where r.Wins > 15 && (r.Country == "Brazil" || r.Country == "Austria")
                          select r;
 
+
+            var racers1 = Formula1.GetChampions().ToList().FindAll(r => r.Wins > 15 && (r.Country == "Brazil" || r.Country == "Austria"));
+
+
             foreach (var r in racers)
             {
                 Console.WriteLine($"{r:A}");
@@ -55,6 +59,9 @@ namespace EnumerableSample
         {
             var racers = Formula1.GetChampions()
                 .Where((r, index) => r.LastName.StartsWith("A") && index % 2 != 0);
+
+            var racers1 = Formula1.GetChampions().Where((r, i) => r.LastName.StartsWith("A")&&i%2!=0);
+
             foreach (var r in racers)
             {
                 Console.WriteLine($"{r:A}");
@@ -65,6 +72,8 @@ namespace EnumerableSample
         {
             var racers = Formula1.GetChampions()
                 .Where(r => r.Wins > 15 && (r.Country == "Brazil" || r.Country == "Austria"));
+
+
 
             foreach (var r in racers)
             {
