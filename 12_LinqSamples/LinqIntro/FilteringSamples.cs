@@ -1,43 +1,14 @@
 ﻿using DataLib;
-using Microsoft.Extensions.CommandLineUtils;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
-namespace EnumerableSample
+namespace LinqIntro
 {
     public class FilteringSamples
     {
-        internal static void Register(CommandLineApplication app)
-        {
-            app.Command("filter", cmd =>
-            {
-                var invokeMethodOption = new CommandOption("-m", CommandOptionType.NoValue);
-                var indexOption = new CommandOption("-i", CommandOptionType.NoValue);
-                var typeOption = new CommandOption("-t", CommandOptionType.NoValue);
-                cmd.Options.AddRange(new[] { invokeMethodOption, indexOption, typeOption });
-                cmd.Description = "filter -[m|i|t]";
-                cmd.OnExecute(() =>
-                {
-                    if (invokeMethodOption.HasValue())
-                    {
-                        FilteringWithMethods();
-                    }
-                    else if (indexOption.HasValue())
-                    {
-                        FilteringWithIndex();
-                    }
-                    else if (typeOption.HasValue())
-                    {
-                        TypeFiltering();
-                    }
-                    else
-                    {
-                        Filtering();
-                    }
-                    return 0;
-                });
-            });
-        }
+    
 
         public static void Filtering()
         {

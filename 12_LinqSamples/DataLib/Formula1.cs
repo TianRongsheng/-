@@ -45,7 +45,7 @@ namespace DataLib
                 new Racer("Sebastian", "Vettel", "Germany", 198, 47, new int[] { 2010, 2011, 2012, 2013 }, new string[] { "Red Bull Racing" }),
                 new Racer("Nico", "Rosberg", "Germany", 207, 24, new int[] { 2016 }, new string[] { "Mercedes" })
               };
-            }
+        }
         //获取车手冠军列表（1950-2017）
         public static IList<Racer> GetChampions()
         { return s_racers ?? (s_racers = InitializeRacers()); }
