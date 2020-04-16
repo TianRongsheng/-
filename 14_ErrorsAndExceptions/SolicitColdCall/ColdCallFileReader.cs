@@ -9,7 +9,7 @@ namespace SolicitColdCall
         private StreamReader _sr;
         private uint _nPeopleToRing;
         private bool _isDisposed = false;
-        private bool _isOpen = false;
+        private bool _isOpen = false;//打开的状态初始为false
 
         public void Open(string fileName)
         {
@@ -38,10 +38,10 @@ namespace SolicitColdCall
         {
             if (_isDisposed)
             {
-                throw new ObjectDisposedException("peopleToRing");
+                throw new ObjectDisposedException("peopleToRing");//ObjectDisposedException使用包含已释放对象名称的字符串初始化 ObjectDisposedException 类的新实例。
             }
 
-            if (!_isOpen)
+            if (!_isOpen)//此时状态为true
             {
                 throw new UnexpectedException(
                     "Attempted to access coldcall file that is not open");
@@ -55,10 +55,11 @@ namespace SolicitColdCall
                     throw new ColdCallFileFormatException("Not enough names");
                 }
                 if (name[0] == 'B')
+                    //此处代表若是输入的内容带有“B”则抛出下面的异常
                 {
                     throw new SalesSpyFoundException(name);
                 }
-                Console.WriteLine(name);
+                Console.WriteLine(name);//将文件的名字输出
             }
             catch (SalesSpyFoundException ex)
             {
@@ -88,7 +89,7 @@ namespace SolicitColdCall
             }
         }
 
-        public void Dispose()
+        public void Dispose()//实现接口
         {
             if (_isDisposed)
             {
@@ -98,7 +99,7 @@ namespace SolicitColdCall
             _isDisposed = true;
             _isOpen = false;
 
-            _fs?.Dispose();
+            _fs?.Dispose();//释放由 Stream 使用的所有资源。
             _fs = null;
         }
     }
