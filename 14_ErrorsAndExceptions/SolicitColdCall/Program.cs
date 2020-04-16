@@ -65,7 +65,7 @@ namespace SolicitColdCall
                 }
                 Console.WriteLine("All callers processed correctly");
             }
-            catch (FileNotFoundException)
+            catch (FileNotFoundException)//FileNotFoundException尝试访问磁盘上不存在的文件失败时引发的异常。
             {
                 Console.WriteLine($"The file {fileName} does not exist");
             }
@@ -73,7 +73,7 @@ namespace SolicitColdCall
             {
                 Console.WriteLine($"The file {fileName} appears to have been corrupted");
                 Console.WriteLine($"Details of problem are: {ex.Message}");
-                if (ex.InnerException != null)
+                if (ex.InnerException != null)//InnerException获取导致当前异常的 Exception 实例
                 {
                     Console.WriteLine($"Inner exception was: {ex.InnerException.Message}");
                 }

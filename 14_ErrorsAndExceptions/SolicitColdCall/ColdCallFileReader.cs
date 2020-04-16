@@ -18,13 +18,13 @@ namespace SolicitColdCall
                 throw new ObjectDisposedException("peopleToRing");
             }
 
-            _fs = new FileStream(fileName, FileMode.Open);
-            _sr = new StreamReader(_fs);
+            _fs = new FileStream(fileName, FileMode.Open);//使用指定的路径和创建模式初始化 FileStream 类的新实例。
+            _sr = new StreamReader(_fs);//为指定的文件名初始化 StreamReader 类的新实例。
 
             try
             {
                 string firstLine = _sr.ReadLine();
-                _nPeopleToRing = uint.Parse(firstLine);
+                _nPeopleToRing = uint.Parse(firstLine);//将数字的字符串表示形式转换为它的等效 32 位无符号整数。
                 _isOpen = true;
             }
             catch (FormatException ex)
