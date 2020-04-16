@@ -44,6 +44,8 @@ namespace ListSamples
             int index4 = racers.FindIndex(r => r.Wins == 51);
             Racer racer = racers.Find(r => r.FirstName == "Niki");
             List<Racer> bigWinners = racers.FindAll(r => r.Wins > 20);
+
+           
             foreach (Racer r in bigWinners)
             {
                 Console. WriteLine($"{r:A}");

@@ -19,7 +19,7 @@ namespace DataLib
             Wins = wins;
             //多值属性Years 属性列出了赛车手获得冠军的年份，一些赛车手曾多次获得冠军。
             Years = years != null ? new List<int>(years) : new List<int>();
-            //Cars 属性用于列出赛车手在获得冠军的年份中使用的所有车型
+            //Cars 属性用于列出赛车手在获得冠军中使用的所有车型
             Cars = cars != null ? new List<string>(cars) : new List<string>();
         }
         public Racer(string firstName, string lastName, string country, int starts, int wins)
