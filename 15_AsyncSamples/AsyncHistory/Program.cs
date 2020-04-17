@@ -8,13 +8,13 @@ namespace AsyncHistory
 
     class Program
     {
-        private const string url = "http://www.cninnovation.com";
+        private const string url = "http://www.lzzy.net";
         static async Task Main()
         {
             SynchronizedAPI();
-        //    AsynchronousPattern();
-            EventBasedAsyncPattern();
-            await TaskBasedAsyncPatternAsync();
+          // AsynchronousPattern();
+           //EventBasedAsyncPattern();
+           await TaskBasedAsyncPatternAsync();
             Console.ReadLine();
         }
 
@@ -67,7 +67,7 @@ namespace AsyncHistory
             Console.WriteLine(nameof(SynchronizedAPI));
             using (var client = new WebClient())
             {
-                string content = client.DownloadString(url);
+                string content = client.DownloadString(url);              
                 Console.WriteLine(content.Substring(0, 100));
             }
             Console.WriteLine();
