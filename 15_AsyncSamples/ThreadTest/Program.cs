@@ -8,18 +8,20 @@ namespace ThreadTest
     {
         static void Main(string[] args)
         {
-            ThreadSample();
-            ThreadJoin();
-            Write0();
+            ThreadSample(); //创建线程
+             ThreadJoin();     
+             Write0();
 
         }
 
         static void ThreadSample() 
-        {           
-            //创建一个新线程t
+        {
+            //创建一个新线程t，调用Write1（）
             Thread t = new Thread(Write1);
             t.Start(); // running Write1()
-           
+            t.Join();
+
+
         }
         static void ThreadJoin()
         {
@@ -30,9 +32,10 @@ namespace ThreadTest
 
         }
 
-         static void Write2(object obj)
+         static void Write2()
         {
-            for (int i = 0; i < 1000; i++)      Console.Write("2");            
+            for (int i = 0; i < 1000; i++)
+            { Console.Write("2");             }
             Thread.Sleep(1000);//休眠
         }
         static void Write0()

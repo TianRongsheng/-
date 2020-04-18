@@ -14,6 +14,7 @@ namespace Foundations
 
         private static readonly Command[] commands =
         {
+           
             new Command("-async", nameof(CallerWithAsync), CallerWithAsync),
             new Command("-async2", nameof(CallerWithAsync2), CallerWithAsync2),
             new Command("-awaiter", nameof(CallerWithAwaiter), CallerWithAwaiter),
@@ -40,7 +41,7 @@ namespace Foundations
                 return;
             }
             command.Action();
-            
+
             Console.ReadLine();
         }
 
@@ -81,10 +82,11 @@ namespace Foundations
             }
         }
 
-        private static async void MultipleAsyncMethods()
+        private static  async void MultipleAsyncMethods()
         {
-            string s1 = await GreetingAsync("Stephanie");
-            string s2 = await GreetingAsync("Matthias");
+           string s1 = await GreetingAsync("Stephanie");
+           string s2 = await GreetingAsync("Matthias");
+ 
             Console.WriteLine($"Finished both methods.{Environment.NewLine} Result 1: {s1}{Environment.NewLine} Result 2: {s2}");
         }
 
@@ -131,11 +133,19 @@ namespace Foundations
                 TraceThreadAndTask($"ended {nameof(CallerWithAwaiter)}");
             }
         }
-
+        /// <summary>
+        /// 异步方法
+        /// 内含await
+        /// 用async修饰
+        /// </summary>
         private static async void CallerWithAsync()
         {
+            //跟踪线程任务
             TraceThreadAndTask($"started {nameof(CallerWithAsync)}");
+            //调用异步方法，异步获取祝词
             string result = await GreetingAsync("Stephanie");
+            //当异步获取祝词方法执行完毕前，余下行会被阻塞
+            //但启用本方法CallerWithAsync的线程可以被重用
             Console.WriteLine(result);
             TraceThreadAndTask($"ended {nameof(CallerWithAsync)}");
         }
@@ -147,13 +157,22 @@ namespace Foundations
             TraceThreadAndTask($"ended {nameof(CallerWithAsync2)}");
         }
 
-        static Task<string> GreetingAsync(string name) =>
-            Task.Run(() =>
-            {
-                TraceThreadAndTask($"running {nameof(GreetingAsync)}");
-                return Greeting(name);
-            });
-
+        /// <summary>
+        /// 创建祝词字符串异步获取任务
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        static Task<string> GreetingAsync(string name)
+        {
+            Task<string> t;
+            //将指定的工作放在线程池中运行，并返回一个任务
+            t = Task.Run(() =>
+              {
+                  TraceThreadAndTask($"running {nameof(GreetingAsync)}");
+                  return Greeting(name);
+              });
+            return t;
+        }
         private readonly static Dictionary<string, string> names = new Dictionary<string, string>();
 
         static async ValueTask<string> GreetingValueTaskAsync(string name)
@@ -166,7 +185,7 @@ namespace Foundations
             {
                 result = await GreetingAsync(name);
                 names.Add(name, result);
-                return result;                
+                return result;
             }
         }
 
@@ -178,8 +197,8 @@ namespace Foundations
             }
             else
             {
-                Task<string> t1 =  GreetingAsync(name);
-                
+                Task<string> t1 = GreetingAsync(name);
+
                 TaskAwaiter<string> awaiter = t1.GetAwaiter();
                 awaiter.OnCompleted(OnCompletion);
                 return new ValueTask<string>(t1);
@@ -190,18 +209,29 @@ namespace Foundations
                 }
             }
         }
-
+        /// <summary>
+        /// 延迟一段事件后返祝词回字符串--人为设置阻塞
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         static string Greeting(string name)
         {
+            //显示当前线程和任务ID
             TraceThreadAndTask($"running {nameof(Greeting)}");
+            //延迟3000毫秒，等待任务执行完成
             Task.Delay(3000).Wait();
+            //返回问候语字符串
             return $"Hello, {name}";
         }
-
+        /// <summary>
+        /// 跟踪线程和任务
+        /// </summary>
+        /// <param name="info"></param>
         public static void TraceThreadAndTask(string info)
         {
+            //获取当前任务的ID号
             string taskInfo = Task.CurrentId == null ? "no task" : "task " + Task.CurrentId;
-
+            //输出当前活动的线程号和任务ID号
             Console.WriteLine($"{info} in thread {Thread.CurrentThread.ManagedThreadId} and {taskInfo}");
         }
     }

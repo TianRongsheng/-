@@ -12,9 +12,9 @@ namespace AsyncHistory
         static async Task Main()
         {
             SynchronizedAPI();
-        //    AsynchronousPattern();
-            //EventBasedAsyncPattern();
-            //await TaskBasedAsyncPatternAsync();
+          // AsynchronousPattern();
+           //EventBasedAsyncPattern();
+           await TaskBasedAsyncPatternAsync();
             Console.ReadLine();
         }
 
@@ -31,7 +31,7 @@ namespace AsyncHistory
 
         private static void EventBasedAsyncPattern()
         {
-            Console.WriteLine(nameof(EventBasedAsyncPattern)); 
+            Console.WriteLine(nameof(EventBasedAsyncPattern));
             using (var client = new WebClient())
             {
                 client.DownloadStringCompleted += (sender, e) =>
@@ -65,10 +65,10 @@ namespace AsyncHistory
         private static void SynchronizedAPI()
         {
             Console.WriteLine(nameof(SynchronizedAPI));
-            using (var client = new WebClient())//提供用于将数据发送到由 URI 标识的资源及从这样的资源接收数据的常用方法。
+            using (var client = new WebClient())
             {
-                string content = client.DownloadString(url);//以 String 形式下载请求的资源。 以 Uri 形式指定要下载的资源。
-                Console.WriteLine(content.Substring(0, 100));//从此实例检索子字符串。 子字符串从指定的字符位置开始且具有指定的长度。
+                string content = client.DownloadString(url);              
+                Console.WriteLine(content.Substring(0, 100));
             }
             Console.WriteLine();
         }
