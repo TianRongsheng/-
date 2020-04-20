@@ -101,11 +101,11 @@ namespace OperatorsSample
         private static void IsOperator()
         {
             Console.WriteLine(nameof(IsOperator));
-            int i = 10;
-            if (i is object) // always an object
-            {
-                Console.WriteLine("i is an object");
-            }
+         //   int i = 10;
+            //if (i is object) // always an object
+            //{
+            //    Console.WriteLine("i is an object");
+            //}
             Console.WriteLine();
         }
 

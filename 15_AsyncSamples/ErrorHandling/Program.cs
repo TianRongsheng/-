@@ -72,10 +72,10 @@ namespace ErrorHandling
 
         private async static void StartTwoTasksParallel()
         {
-            Task t1 = null;
+         
             try
             {
-                t1 = ThrowAfter(2000, "first");
+                Task t1   = ThrowAfter(2000, "first");
                 Task t2 = ThrowAfter(1000, "second");
                 await Task.WhenAll(t1, t2);
             }
@@ -106,7 +106,7 @@ namespace ErrorHandling
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
                 ThrowAfter(200, "first");
 #pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-                              // Exception is not caught because the exception is assigned to the task which is not awaited
+                // Exception is not caught because the exception is assigned to the task which is not awaited
             }
             catch (Exception ex)
             {
