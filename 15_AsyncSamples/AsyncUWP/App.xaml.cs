@@ -15,16 +15,16 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace AsyncWindowsApp
+namespace AsyncUWP
 {
     /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
+    /// 提供特定于应用程序的行为，以补充默认的应用程序类。
     /// </summary>
     sealed partial class App : Application
     {
         /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
+        /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
+        /// 已执行，逻辑上等同于 main() 或 WinMain()。
         /// </summary>
         public App()
         {
@@ -33,29 +33,29 @@ namespace AsyncWindowsApp
         }
 
         /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used such as when the application is launched to open a specific file.
+        /// 在应用程序由最终用户正常启动时进行调用。
+        /// 将在启动应用程序以打开特定文件等情况下使用。
         /// </summary>
-        /// <param name="e">Details about the launch request and process.</param>
+        /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
-            // Do not repeat app initialization when the Window already has content,
-            // just ensure that the window is active
+            // 不要在窗口已包含内容时重复应用程序初始化，
+            // 只需确保窗口处于活动状态
             if (rootFrame == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
+                // 创建要充当导航上下文的框架，并导航到第一页
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    //TODO: Load state from previously suspended application
+                    //TODO: 从之前挂起的应用程序加载状态
                 }
 
-                // Place the frame in the current Window
+                // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;
             }
 
@@ -63,37 +63,37 @@ namespace AsyncWindowsApp
             {
                 if (rootFrame.Content == null)
                 {
-                    // When the navigation stack isn't restored navigate to the first page,
-                    // configuring the new page by passing required information as a navigation
-                    // parameter
+                    // 当导航堆栈尚未还原时，导航到第一页，
+                    // 并通过将所需信息作为导航参数传入来配置
+                    // 参数
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
-                // Ensure the current window is active
+                // 确保当前窗口处于活动状态
                 Window.Current.Activate();
             }
         }
 
         /// <summary>
-        /// Invoked when Navigation to a certain page fails
+        /// 导航到特定页失败时调用
         /// </summary>
-        /// <param name="sender">The Frame which failed navigation</param>
-        /// <param name="e">Details about the navigation failure</param>
+        ///<param name="sender">导航失败的框架</param>
+        ///<param name="e">有关导航失败的详细信息</param>
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
         /// <summary>
-        /// Invoked when application execution is being suspended.  Application state is saved
-        /// without knowing whether the application will be terminated or resumed with the contents
-        /// of memory still intact.
+        /// 在将要挂起应用程序执行时调用。  在不知道应用程序
+        /// 无需知道应用程序会被终止还是会恢复，
+        /// 并让内存内容保持不变。
         /// </summary>
-        /// <param name="sender">The source of the suspend request.</param>
-        /// <param name="e">Details about the suspend request.</param>
+        /// <param name="sender">挂起的请求的源。</param>
+        /// <param name="e">有关挂起请求的详细信息。</param>
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
+            //TODO: 保存应用程序状态并停止任何后台活动
             deferral.Complete();
         }
     }

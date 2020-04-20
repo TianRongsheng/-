@@ -44,7 +44,7 @@ namespace SimpleExceptions
                 }
                 catch (OverflowException ex)
                 {
-                    Console.WriteLine($"An exception was thrown. Message was:溢出");
+                    Console.WriteLine($"An exception was thrown. Message was:溢出{ex}");
                 }
                 finally
                 {
