@@ -27,15 +27,6 @@ namespace DownloadFile
                 return fileName;
         }
 
-        public async static string DownloadFileAsync(string url)
-        {
-
-            string fileName = CreateFileName(url);
-            WebClient client = new WebClient();
-            client.DownloadFile(url, _directory + fileName);
-            return fileName;
-        }
-
         /// <summary>
         /// 创建文件名称
         /// </summary>
