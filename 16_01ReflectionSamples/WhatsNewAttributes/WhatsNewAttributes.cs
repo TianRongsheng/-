@@ -9,7 +9,7 @@ namespace WhatsNewAttributes
     /// 可以将特性应用于类、方法、构造函数
     /// 并可以多次应用于同一项上
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Constructor, AllowMultiple = true, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method |AttributeTargets.Property, AllowMultiple = true, Inherited = false)]
     public class LastModifiedAttribute : Attribute
     {
         private readonly DateTime _dateModified;
@@ -36,6 +36,7 @@ namespace WhatsNewAttributes
     [AttributeUsage(AttributeTargets.Assembly)]
     public class SupportsWhatsNewAttribute : Attribute
     {
+     
     }
 }
 

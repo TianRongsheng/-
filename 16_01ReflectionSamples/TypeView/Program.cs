@@ -10,6 +10,9 @@ namespace TypeView
 
         static void Main()
         {
+            Assembly info = typeof(int).Assembly;
+            Console.WriteLine(info);
+
             Type t = typeof(double);
             AnalyzeType(t);
             Console.WriteLine($"Analysis of type {t.Name}");
