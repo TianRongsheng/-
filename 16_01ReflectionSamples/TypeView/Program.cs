@@ -43,6 +43,7 @@ namespace TypeView
 
         static void AddToOutput(string Text)
         {
+            //在原有的基础上，链接字符串
             OutputText.Append($"{Environment.NewLine} {Text}");
         }
     }

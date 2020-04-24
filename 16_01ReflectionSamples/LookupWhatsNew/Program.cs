@@ -13,11 +13,12 @@ namespace LookupWhatsNew
     class Program
     {
         private static readonly StringBuilder outputText = new StringBuilder(1000);
-        private static DateTime backDateTo = new DateTime(2017, 2, 1);
+        private static DateTime backDateTo = new DateTime(2015, 1, 1);
 
         static void Main()
         {
-            Assembly theAssembly = Assembly.Load(new AssemblyName("VectorClass"));
+             Assembly theAssembly = Assembly.Load(new AssemblyName("VectorClass"));
+
             Attribute supportsAttribute = theAssembly.GetCustomAttribute(typeof(SupportsWhatsNewAttribute));
 
             AddToOutput($"Assembly: {theAssembly.FullName}");
@@ -32,7 +33,8 @@ namespace LookupWhatsNew
                 AddToOutput("Defined Types:");
             }
 
-            foreach (Type definedType in theAssembly.ExportedTypes)
+            var VectorExportedTypes = theAssembly.ExportedTypes;
+            foreach (Type definedType in VectorExportedTypes)
             {
                 DisplayTypeInfo(definedType);
             }
@@ -55,7 +57,13 @@ namespace LookupWhatsNew
 
             AddToOutput($"{Environment.NewLine}class {type.Name}");
 
-            IEnumerable<LastModifiedAttribute> lastModifiedAttributes = type.GetTypeInfo().GetCustomAttributes().OfType<LastModifiedAttribute>().Where(a => a.DateModified >= backDateTo).ToArray();
+            IEnumerable<LastModifiedAttribute> lastModifiedAttributes 
+                = type.GetTypeInfo()
+                .GetCustomAttributes()
+                .OfType<LastModifiedAttribute>()
+                .Where(a => a.DateModified >= backDateTo)
+                .ToArray();
+
             if (lastModifiedAttributes.Count() == 0)
             {
                 AddToOutput($"\tNo changes to the class {type.Name}{Environment.NewLine}");
@@ -69,11 +77,15 @@ namespace LookupWhatsNew
             }
 
             AddToOutput("changes to methods of this class:");
-
-            foreach (MethodInfo method in type.GetTypeInfo().DeclaredMembers.OfType<MethodInfo>())
+            var myMethodInfs = type.GetTypeInfo().DeclaredMembers.OfType<MethodInfo>();
+           
+            foreach (MethodInfo method in myMethodInfs)
             {
-                IEnumerable<LastModifiedAttribute> attributesToMethods = method.GetCustomAttributes()
-                    .OfType<LastModifiedAttribute>().Where(a => a.DateModified >= backDateTo).ToArray();
+                IEnumerable<LastModifiedAttribute> attributesToMethods
+                    = method.GetCustomAttributes()
+                    .OfType<LastModifiedAttribute>()
+                    .Where(a => a.DateModified >= backDateTo)
+                    .ToList();
 
                 if (attributesToMethods.Count() > 0)
                 {

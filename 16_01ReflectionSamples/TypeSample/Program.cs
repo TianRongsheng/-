@@ -18,7 +18,6 @@ namespace TypeSample
         static void InvokeMethod() 
         {
             Type t = typeof(String);
-
             MethodInfo substr = t.GetMethod(
                 "Substring", new Type[] { typeof(int), typeof(int) });
 
