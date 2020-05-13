@@ -21,7 +21,7 @@ namespace ClientApp
 
         private static void ShowUsage()
         {
-            Console.WriteLine($"用法: dotnet run 绝对路径");
+            Console.WriteLine($"用法，如例: dotnet run d:\\addins\\CalculatorLib.dll");
             Console.WriteLine();
             Console.WriteLine("将CalculatorLib.dll复制到外接程序目录");
             Console.WriteLine("并在启动应用程序加载库时传递此目录的绝对路径");
@@ -50,7 +50,6 @@ namespace ClientApp
             double x = 3;
             double y = 4;
             object calc = GetCalculator(addinPath);
-
             object result = calc.GetType().GetMethod("Add").Invoke(calc, new object[] { x, y });
             Console.WriteLine($" {x} + {y} = {result}");
         }

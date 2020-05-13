@@ -17,6 +17,8 @@ namespace DynamicSample
             Console.WriteLine(dyn.GetType());
             Console.WriteLine(dyn);
 
+         //   var d= new Person() { FirstName = "Bugs", LastName = "Bunny" };
+
             dyn = new Person() { FirstName = "Bugs", LastName = "Bunny" };
             Console.WriteLine(dyn.GetType());
             Console.WriteLine($"{dyn.FirstName} {dyn.LastName}");

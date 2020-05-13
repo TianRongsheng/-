@@ -10,6 +10,9 @@ namespace TypeView
 
         static void Main()
         {
+            Assembly info = typeof(int).Assembly;
+            Console.WriteLine(info);
+
             Type t = typeof(double);
             AnalyzeType(t);
             Console.WriteLine($"Analysis of type {t.Name}");
@@ -40,6 +43,7 @@ namespace TypeView
 
         static void AddToOutput(string Text)
         {
+            //在原有的基础上，链接字符串
             OutputText.Append($"{Environment.NewLine} {Text}");
         }
     }

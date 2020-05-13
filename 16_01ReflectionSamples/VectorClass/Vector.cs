@@ -25,10 +25,11 @@ namespace VectorClass
             Z = z;
         }
 
-        [LastModified("19 Jul 2017", "Reduced the number of code lines")]
+     
         public Vector(Vector vector)
             : this (vector.X, vector.Y, vector.Z) { }
 
+        [LastModified("19 Jul 2017", "updated for C# 7 and .NET Core 2")]
         public double X { get;  }
         public double Y { get; }
         public double Z { get; }
