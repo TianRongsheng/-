@@ -10,7 +10,7 @@ namespace DIWithConfiguration
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
             if (config == null) throw new ArgumentNullException(nameof(config));
-
+            //在容器中注册配置数据
             collection.Configure<GreetingServiceOptions>(config);
             return collection.AddTransient<IGreetingService, GreetingService>();
         }

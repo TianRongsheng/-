@@ -12,6 +12,7 @@ namespace DIWithAutofac
         {
             using (IContainer container = RegisterServices())
             {
+                //
                 var controller = container.Resolve<HomeController>();
                 string result = controller.Hello("Katharina");
                
@@ -24,7 +25,7 @@ namespace DIWithAutofac
             var services = new ServiceCollection();
             services.AddSingleton<IGreetingService, GreetingService>();
             services.AddTransient<HomeController>();
-
+            //使用ContainerBuilder创建容器服务器
             var builder = new ContainerBuilder();
             builder.Populate(services);
             return builder.Build();

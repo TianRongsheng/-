@@ -14,6 +14,7 @@ namespace ServicesLifetime
 
         public void C()
         {
+            //增加了释放资源时调用判断
             if (_isDisposed)
                 throw new ObjectDisposedException("ServiceC");
 

@@ -7,6 +7,8 @@
         {
             _greetingService = greetingService;
         }
-        public string Hello(string name) => _greetingService.Greet(name);
+        public string Hello(string name) {
+           return  _greetingService.Greet(name);
+        }
     }
 }

@@ -11,6 +11,10 @@ namespace DIWithConfiguration
 
         private string _from;
 
-        public string Greet(string name) => $"Hello, {name}! Greetings from {_from}";
+        public string Greet(string name)
+        { 
+        return $"你好, {name}! --来自的问候 {_from}";
+        }
+        
     }
 }
